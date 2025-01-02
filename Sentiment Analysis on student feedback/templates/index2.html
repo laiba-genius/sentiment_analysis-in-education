@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+             background-color: rgb(230, 227, 227);
+     background-image: url('./static/image/b.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+    height: 100vh;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+            text-align: center;
+        }
+        .form-container {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-container select, .form-container input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-container button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #555;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Feedback Analysis in more Detail</h1>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <form action="/analyze" method="POST" enctype="multipart/form-data">
+                <label for="file">Upload Feedback CSV:</label>
+                <input type="file" name="file" id="file" accept=".csv" required>
+                <label for="teacher">Select Teacher:</label>
+                <select name="teacher" id="teacher" required>
+                    <option value="">Select Teacher</option>
+                    <option value="Uzma Waheed">Uzma Waheed</option>
+                    <option value="Amina Ferdos">Amina Ferdos</option>
+                    <option value="Ayesha tariq">Ayesha tariq</option>
+                    <option value="">Hina Sattar</option>
+                </select>
+                <label for="department">Select Department:</label>
+                <select name="department" id="department" required>
+                    <option value="">Select Department</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Urdu">Urdu</option>
+                    <option value="CS&IT">CS&IT</option>
+                    <option value="English">English</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Results</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+    background-color: rgb(230, 227, 227);
+     background-image: url('./static/image/b.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+    height: 100vh;}
+        /* Center the heading */
+        h1 {
+            text-align: center;
+        }
+        /* Center the table */
+        table {
+            margin: 0 auto;
+            width: 60%; /* Increase the width of the table */
+        }
+        /* Double the height of the table rows */
+        tbody tr {
+            height: 3em; /* Double the default height (1em) */
+        }
+        /* Increase the size of the plot */
+        #graphDiv {
+            width: 50%;
+            height: 500px; /* Increase the height of the plot */
+            margin: 0 auto;
+             background-image: url('./static/image/b.jpg');
+        }
+    </style>
+</head>
+<body>
+ <div class="btn-container">
+    <button onclick="window.location.href='/next'" id="button" type="button" >next</button>
+</div>
+    <h1>Sentiment Analysis Results</h1>
+
+    <!-- Display pie chart -->
+    <div id="graphDiv"></div>
+
+    <!-- Display sentiment counts in a table -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sentiment</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Positive</td>
+                <td>{{ positive_count }}</td>
+            </tr>
+            <tr>
+                <td>Negative</td>
+                <td>{{ negative_count }}</td>
+            </tr>
+            <tr>
+                <td>Neutral</td>
+                <td>{{ neutral_count }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // Render pie chart using Plotly
+        var graphJSON = {{ graphJSON|safe }};
+        Plotly.plot('graphDiv', graphJSON);
+    </script>
+</body>
+</html>

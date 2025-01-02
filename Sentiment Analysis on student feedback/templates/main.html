@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Review Analyzer</title>
+    <style>
+        /* General Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Times New Roman, sans-serif;
+            background-image: url("./static/image/interior.jpg");
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .main-content .left-content,
+         .main-content .right-content {
+            flex-basis: 45%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Changed to light white */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.0);
+        }
+
+        .main-content .left-content {
+            text-align: justify;
+            height: 400px; /* Increased height */
+            width: 45%; /* Increased width */
+            margin: auto; /* Centered horizontally */
+        }
+
+        .main-content .left-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: justify; /* Aligned paragraph text */
+        }
+
+        .main-content .left-content ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .main-content .left-content ul li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: justify; /* Aligned list items */
+        }
+
+        .main-content .get-started-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .main-content .get-started-button a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .main-content .get-started-button a:hover {
+            background-color: #1abc9c;
+        }
+
+        .main-content .right-content img {
+           max-width: 100%;
+           max-height: 100%;
+            border-radius: 10px;
+        }
+        /* Footer Styles */
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 14px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Feedback Review Analyzer</h1>
+        <nav>
+            <ul>
+                <li><a href="/"></a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="left-content">
+                <h2>Welcome to our Feedback Analysis Tool</h2><br>
+                <p>Understanding student feedback is crucial for improving educational experiences. Our tool helps you analyze sentiments in student feedback to gain insights and make informed decisions.</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>✔️ Real-time sentiment analysis</li>
+                    <li>✔️ Visualization of feedback trends</li>
+                    <li>✔️ Detailed reports for actionable insights</li>
+                    <li>✔️ Easy-to-use interface</li>
+                </ul>
+                <div class="get-started-button">
+                    <a href="/get">Get Started</a>
+                </div>
+            </div>
+            <div class="right-content">
+                <img src="static/SENTIMENT-09-1.jpg" alt="Students Collaborating">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Student Feedback Review Analyzer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+

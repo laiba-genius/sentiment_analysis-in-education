@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Feedback Analyzer</title>
+    <link rel="stylesheet" href="../static/style.css">
+<style>
+    * {
+    margin= 0;
+    padding= 0;
+    }
+    body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    padding: 100px;
+    background-color: rgb(230, 227, 227);
+     background-image: url('./static/image/desk.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+    height: 100vh;
+}
+</style>
+</head>
+
+<body>
+<div class="background-image">
+    <div class="container">
+        <div class="item1">
+            <h1>
+                Student Feedback Analyzer Tool
+            </h1>
+
+        </div>
+        <span>
+            <a href="../static/forms.pdf" target="_blank"> View a sample Feedback Form </a><br>
+
+
+            <a href="https://docs.google.com/forms/d/1iC2Kc45yUEv73f4NWqc22ZGzkFtVKnsXYBm8sgAE4vY/template/preview" target="_blank"> Click here to make a copy of this Google Form </a>
+        </span>
+
+        <div class="form_area">
+            <form action="/" method="post" enctype="multipart/form-data">
+                <div id="field_inside">
+                    <input type="file" name="file_name" id="file" accept=".csv">
+                    <div id="custom-msg">No file Chosen, yet.</div>
+                    <button type="button" id="upload-button">Choose File</button>
+
+                </div>
+                <div id="drop">
+                    <div>
+                        <label for="category">Choose a Category:</label>
+
+                        <select name="Cate" id="category">
+                        <option value="0" >Select the category</option>
+                        <option value="1">Teacher Feedback</option>
+                        <option value="2">Course Content</option>
+                        <option value="3">Examination Pattern</option>
+                        <option value="4">Laboratory</option>
+                        <option value="5">Library Facilities</option>
+                        <option value="6">Extra Co-Curricular Activities</option>
+
+                    </select>
+                    </div>
+
+
+                </div>
+                <div id="text_down">
+                    <p style="margin:auto;font-size:15px;">Only if you want Analysis for one Category</p>
+
+                </div>
+
+                <div id="but">
+                    <button id="but1" type="submit" class="btn btn-primary"> Submit </button>
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+    <script>
+        const fileBtn = document.getElementById("file");
+        const customBtn = document.getElementById("upload-button");
+        const customTxt = document.getElementById("custom-msg");
+        customBtn.addEventListener("click", function() {
+            fileBtn.click();
+
+        });
+        file.addEventListener("change", function() {
+            if (fileBtn.value) {
+                customTxt.innerHTML = fileBtn.value.match(
+                    /[\/\\]([\w\d\s\.\~\(\)]+)$/)[1];
+            } else {
+                customTxt.innerHTML = "NO file Chosen, Yet.";
+
+            }
+        });
+    </script>
+</div>
+</body>
+
+</html>

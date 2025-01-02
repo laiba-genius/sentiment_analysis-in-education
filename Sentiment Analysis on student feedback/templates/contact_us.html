@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Contact Us Form | CodingLab</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Decreased the height */
+            background-image: url('./static/image/inside.png');
+            background-repeat: no-repeat;
+             background-size: cover;
+            background-color: #f4f4f4;
+        }
+</style>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+         <i class="fas fa-map-marker-alt"></i>
+    <div class="topic">Address</div>
+         <div class="text-one">District BWP Tehsil Yazman  XXXXXXXX</div>
+          <div class="text-two">XYZ</div>
+       </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+         <div class="topic">Phone</div>
+         <div class="text-one">+92 3xxxxxxxxx</div>
+         <div class="text-two">+92 3xxxxxxxxx</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">laibaijaz116@gmail.com</div>
+  </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+        <p>If you have any help from me or any types of queries related to my analyzer tool, you can send me a message from here. It's my pleasure to help you.</p>
+        <h1>Contact Form</h1>
+        <form action="https://formspree.io/f/mayrpdyn" method="POST" >
+          <div class="input-box">
+            <input type="text" name="name" placeholder="Enter your name" id="name" required>
+          </div>
+          <div class="input-box">
+            <input type="email" name="Email" placeholder="Enter your email" id="email" required>
+          </div>
+          <div class="input-box message-box">
+            <textarea name="message" placeholder="Enter your message" id="message" required></textarea>
+          </div>
+          <div class="button">
+            <input type="submit" value="Send Now">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

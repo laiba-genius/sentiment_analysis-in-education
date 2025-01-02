@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CDN -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Decreased the height */
+            background-image: url('./static/image/inside.png');
+            background-repeat: no-repeat;
+             background-size: cover;
+            background-color: #f4f4f4;
+        }
+.logout-button {
+        position: absolute;
+        top:  6px;
+        left: 6px;
+        background-color: blue;
+        color: white;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 700px; /* Increased the max-width */
+            height : 500px;
+            background-color: rgba(255, 255, 255, 0.6);;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255,0.6);
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            grid-column: 1 / -1;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .btn-container {
+            text-align: center;
+            grid-column: 1 / -1;
+            margin-top: 20px;
+        }
+
+        .contact-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            grid-column: 1 / -1;
+            margin-top: 20px;
+        }
+
+        .contact-container p {
+            margin: 5px;
+        }
+
+        .contact-container img {
+            width: 350px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .btn-container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-container button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+<div class="logout-button">
+    <button onclick="window.location.href='/logout'" id="button1" type="button" >Logout</button>
+</div>
+<div class="container">
+    <div class="header">
+        <h1>Thank You For Using My Sentiment Analyzer Tool</h1>
+    </div>
+    <div class="contact-container">
+        <img src="static/image/icon.jpeg.jpg" alt="Contact Image">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, feel free to contact us:</p>
+    </div>
+    <div class="btn-container">
+        <button onclick="window.location.href='/contact me'" id="button" type="button">Click Me</button>
+    </div>
+</div>
+</body>
+</html>
+
+
+

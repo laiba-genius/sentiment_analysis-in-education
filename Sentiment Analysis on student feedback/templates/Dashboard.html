@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style type="text/css">
+    body {
+      display: flex;
+      background-color: rgb(230, 227, 227);
+      background-image: url('./static/image/tech.jpg');
+      background-size: cover;
+  background-repeat: no-repeat;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: rgb(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding shadow for better visual */
+      width: 800px; /* Adjust container width as needed */
+    }
+
+    .image-container {
+      flex: 1;
+      text-align: center;
+    }
+
+    .text-container {
+      flex: 1;
+      text-align: left;
+      padding-left: 20px; /* Adjusted padding */
+    }
+
+    .img_dog {
+      width: 100%; /* Increased image size */
+    }
+
+
+    h2 {
+  margin-top: 0; /* Resetting top margin for the heading */
+  text-align: center; /* Align the heading to the center */
+}
+     // margin-bottom: 20px;
+     // color: #000;
+
+
+    .points {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .points li:before {
+      content: "\2713\0020"; /* Double check sign */
+    }
+
+    .btn-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .btn-container button {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="background-image">
+  <div class="container">
+    <div class="image-container">
+      <img class="img_dog" src="static/image/about.svg" width="390" height="390"> <!-- Increased image size -->
+    </div>
+    <div class="text-container">
+      <h2>Help Us Improve</h2>
+      <h3>Let us know how we can improve our services.</h3>
+      <div>
+        <h4>How to respond to feedback</h4>
+        <ul class="points">
+          <li>Fill out all required fields.</li>
+          <li>Write about what you feel for the particular.</li>
+          <li>Suggestions if any.</li>
+        </ul>
+        <p>
+          As good and effective educators, we always want to improve. Improvement is something we instill in our students and it would be hypocritical to not expect the same from ourselves. Students are the center of our classroom and they are where we can find the most relevant information about how to be better at our jobs. If we are not delivering effectively to the students how can we ever expect better satisfaction hopefully.
+        </p>
+        <div class="btn-container">
+          <button type="button" onclick="window.location.href='/Let start this'" class="btn btn-dark">Let's start</button>
+          <button type="button" onclick="window.location.href='/logout'" class="btn btn-dark">Back to login page</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
